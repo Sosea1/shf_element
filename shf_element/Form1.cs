@@ -85,6 +85,12 @@ namespace shf_element
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Add_element form2 = new Add_element();
+            form2.Show();
+        }
     }
     public class Elements
     {
