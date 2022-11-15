@@ -8,12 +8,13 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace shf_element
 {
     public partial class Add_element : Form
     {
-        string path_project= @"D:\projects VScode\shf_debuger\shf_debuger\bin\Debug\";
+        
         string file;
         public Add_element()
         {
@@ -34,10 +35,33 @@ namespace shf_element
             if (choose_pic.ShowDialog() == DialogResult.OK)
             {
                 file = choose_pic.FileName;
-                File.Copy(file, path_project + Path.GetFileName(file));
+
                 pictureBox1.Image = Image.FromFile(file);
             }
 
+        }
+        public void copy_file() 
+        {
+            System.IO.File.Copy(file, Application.StartupPath + @"\element_picture\" + Path.GetFileName(nameBox.Text) + ".png");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                copy_file();
+            }
+            catch (DirectoryNotFoundException)
+            {
+                Directory.CreateDirectory(Application.StartupPath + @"\element_picture\");
+                copy_file();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка");
+            
+            }
+            MessageBox.Show("Успешно добавлено");
         }
     }
 }
