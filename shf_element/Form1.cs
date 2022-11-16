@@ -15,20 +15,9 @@ using System.Text.Json;
 
 namespace shf_element
 {
-  
-
-   
-
+ 
     public partial class Form1 : Form
     {
-       
-
-
-
-
-
-
-
 
         object[] list1 = new object[] {"Нагрузка","Ёмкостная нагрузка ЛП","Индуктивная нагрузка ЛП","Разомкнутый конец МПЛ с учётом краевой ёмкости"};
         object[] list2 = new object[] { "Нагрузка", "Ёмкостная нагрузка ЛП", "Индуктивная нагрузка ЛП", "Разомкнутый конец МПЛ с учётом краевой ёмкости" };
@@ -77,8 +66,8 @@ namespace shf_element
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Class1 cl = new Class1();
-            cl.Trf();
+            Add_element add_Element = new Add_element();
+            add_Element.Show();
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)

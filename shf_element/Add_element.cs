@@ -47,7 +47,9 @@ namespace shf_element
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            Insert_Elements el = new Insert_Elements();
+            el.Trf();
+            /*try
             {
                 copy_file();
             }
@@ -61,7 +63,7 @@ namespace shf_element
                 MessageBox.Show("Произошла ошибка");
             
             }
-            MessageBox.Show("Успешно добавлено");
+            MessageBox.Show("Успешно добавлено");*/
         }
     }
 }

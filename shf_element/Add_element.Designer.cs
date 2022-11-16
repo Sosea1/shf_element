@@ -55,7 +55,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Group = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Params = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Values = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Matrix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -284,11 +291,57 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Group,
+            this.Name,
+            this.Params,
+            this.Values,
+            this.Matrix});
+            this.dataGridView1.Location = new System.Drawing.Point(481, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(601, 437);
+            this.dataGridView1.TabIndex = 49;
+            // 
+            // Group
+            // 
+            this.Group.HeaderText = "Группа элемента";
+            this.Group.Items.AddRange(new object[] {
+            "Двухполюсник",
+            "Четырехполюсник",
+            "Шестиполюсник",
+            "Восьмиполюстник"});
+            this.Group.Name = "Group";
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Название элемента";
+            this.Name.Name = "Name";
+            // 
+            // Params
+            // 
+            this.Params.HeaderText = "Параметры элемента";
+            this.Params.Name = "Params";
+            // 
+            // Values
+            // 
+            this.Values.HeaderText = "Промежуточные значения";
+            this.Values.Name = "Values";
+            // 
+            // Matrix
+            // 
+            this.Matrix.HeaderText = "Матрица";
+            this.Matrix.Name = "Matrix";
+            // 
             // Add_element
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 497);
+            this.ClientSize = new System.Drawing.Size(1085, 497);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox11);
@@ -315,9 +368,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
-            this.Name = "Add_element";
             this.Text = "Add_element";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +405,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Group;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Params;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Values;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Matrix;
     }
 }
