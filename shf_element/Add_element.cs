@@ -20,6 +20,7 @@ namespace shf_element
         {
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
+            P1.Location = new Point(1, 1);
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -55,6 +56,10 @@ namespace shf_element
                 dataGridView1.Rows[i].HeaderCell.Value = value;
                 i++;
             }
+            P1.Hide();
+            P2.Location = new Point(1, 1);
+            P2.Show();
+
 
         }
 
@@ -69,11 +74,32 @@ namespace shf_element
             dataGridView2.RowCount = a;
             dataGridView2.ColumnCount = a;
             dataGridView2.RowHeadersVisible = false;
+            P2.Hide();
+            P3.Location = new Point(1, 1);
+            P3.Show();
+        }
+
+       
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            P2.Hide();
+            P1.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Rows.Clear();
+            P3.Hide();
+            P2.Show();
         }
 
         private void Add_element_Load(object sender, EventArgs e)
         {
-            P3.Dock = DockStyle.Fill;
+            P2.Hide();
+            P3.Hide();
+            
         }
 
 
