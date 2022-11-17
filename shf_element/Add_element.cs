@@ -71,6 +71,12 @@ namespace shf_element
             dataGridView2.RowHeadersVisible = false;
         }
 
+        private void Add_element_Load(object sender, EventArgs e)
+        {
+            P3.Dock = DockStyle.Fill;
+            splitContainer3.
+        }
+
 
 
         //для изображений
