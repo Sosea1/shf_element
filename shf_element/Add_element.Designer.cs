@@ -83,7 +83,7 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(483, 3);
+            this.button2.Location = new System.Drawing.Point(479, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(101, 23);
             this.button2.TabIndex = 48;
@@ -107,6 +107,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -232,6 +233,7 @@
             // 
             // splitContainer3.Panel1
             // 
+            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.White;
             this.splitContainer3.Panel1.Controls.Add(this.dataGridView2);
             // 
             // splitContainer3.Panel2
@@ -239,8 +241,8 @@
             this.splitContainer3.Panel2.Controls.Add(this.button7);
             this.splitContainer3.Panel2.Controls.Add(this.button5);
             this.splitContainer3.Panel2.Controls.Add(this.button6);
-            this.splitContainer3.Size = new System.Drawing.Size(598, 287);
-            this.splitContainer3.SplitterDistance = 242;
+            this.splitContainer3.Size = new System.Drawing.Size(599, 284);
+            this.splitContainer3.SplitterDistance = 241;
             this.splitContainer3.TabIndex = 51;
             // 
             // dataGridView2
@@ -263,7 +265,7 @@
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(494, 3);
+            this.button7.Location = new System.Drawing.Point(479, 3);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(101, 23);
             this.button7.TabIndex = 55;
@@ -274,7 +276,7 @@
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(366, 3);
+            this.button5.Location = new System.Drawing.Point(360, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(101, 23);
             this.button5.TabIndex = 49;
@@ -295,13 +297,11 @@
             // 
             // P3
             // 
-            this.P3.AutoSize = true;
             this.P3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.P3.Controls.Add(this.splitContainer3);
             this.P3.Location = new System.Drawing.Point(3, 323);
-            this.P3.MinimumSize = new System.Drawing.Size(598, 287);
             this.P3.Name = "P3";
-            this.P3.Size = new System.Drawing.Size(598, 287);
+            this.P3.Size = new System.Drawing.Size(599, 284);
             this.P3.TabIndex = 54;
             // 
             // splitContainer2
@@ -319,8 +319,8 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.button3);
             this.splitContainer2.Panel2.Controls.Add(this.button4);
-            this.splitContainer2.Size = new System.Drawing.Size(598, 287);
-            this.splitContainer2.SplitterDistance = 243;
+            this.splitContainer2.Size = new System.Drawing.Size(599, 284);
+            this.splitContainer2.SplitterDistance = 241;
             this.splitContainer2.TabIndex = 51;
             // 
             // dataGridView1
@@ -348,7 +348,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(366, 3);
+            this.button3.Location = new System.Drawing.Point(360, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 23);
             this.button3.TabIndex = 49;
@@ -359,7 +359,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(483, 3);
+            this.button4.Location = new System.Drawing.Point(479, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(101, 23);
             this.button4.TabIndex = 48;
@@ -372,7 +372,7 @@
             this.P2.Controls.Add(this.splitContainer2);
             this.P2.Location = new System.Drawing.Point(796, 49);
             this.P2.Name = "P2";
-            this.P2.Size = new System.Drawing.Size(598, 287);
+            this.P2.Size = new System.Drawing.Size(599, 284);
             this.P2.TabIndex = 53;
             // 
             // Add_element
@@ -380,7 +380,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(602, 285);
+            this.ClientSize = new System.Drawing.Size(1420, 651);
             this.Controls.Add(this.P3);
             this.Controls.Add(this.P2);
             this.Controls.Add(this.P1);
@@ -407,7 +407,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.P2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
