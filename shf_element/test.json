@@ -16,23 +16,5 @@
       "Z": "C-A",
       "Z1": "B-A"
     }
-  },
-  {
-    "group": "smth",
-    "name": "smth",
-    "matrix": [
-      "A/B",
-      "B/c",
-      "C/a"
-    ],
-    "parameters": [
-      "A",
-      "B",
-      "C"
-    ],
-    "other_par": {
-      "Z": "C-A",
-      "Z1": "B-A"
-    }
   }
 ]

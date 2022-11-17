@@ -29,16 +29,9 @@ namespace shf_element
             };
             string file_path = @"C:\Users\user\source\repos\shf_element\shf_element\test.json";
             var jsonData = File.ReadAllText(file_path);
-            List<Insert_Elements> elementsList = JsonSerializer.Deserialize<List<Insert_Elements>>(jsonData,options);
-            
-           /* if ( == null)
-            {
-                
-                elementsList = insert_Elements;
-            }
-            else JsonSerializer.Deserialize<List<Insert_Elements>>(jsonData);
-            //var elementsList = JsonSerializer.Deserialize<List<Insert_Elements>>(jsonData) ?? new List<Insert_Elements>();
-           */
+           // List<Insert_Elements> elementsList = JsonSerializer.Deserialize<List<Insert_Elements>>(jsonData,options);
+
+            var elementsList = JsonSerializer.Deserialize<List<Insert_Elements>>(jsonData) ?? new List<Insert_Elements>();
 
             elementsList.Add(new Insert_Elements()
             {

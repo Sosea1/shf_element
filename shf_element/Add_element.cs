@@ -47,23 +47,39 @@ namespace shf_element
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Insert_Elements el = new Insert_Elements();
-            el.Trf();
-            /*try
-            {
-                copy_file();
-            }
-            catch (DirectoryNotFoundException)
-            {
-                Directory.CreateDirectory(Application.StartupPath + @"\element_picture\");
-                copy_file();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Произошла ошибка");
-            
-            }
-            MessageBox.Show("Успешно добавлено");*/
+      
         }
+
+        private void Add_element_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 3; i++) dataGridView1.Rows.Add();
+            dataGridView1.Rows[0].HeaderCell.Value = "Параметры";
+            dataGridView1.Rows[1].HeaderCell.Value = "Промежуточные значения";
+            dataGridView1.Rows[2].HeaderCell.Value = "Матрица";
+           
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //для изображений
+        /*try
+       {
+           copy_file();
+       }
+       catch (DirectoryNotFoundException)
+       {
+           Directory.CreateDirectory(Application.StartupPath + @"\element_picture\");
+           copy_file();
+       }
+       catch (Exception)
+       {
+           MessageBox.Show("Произошла ошибка");
+
+       }
+       MessageBox.Show("Успешно добавлено");*/
+
     }
 }
