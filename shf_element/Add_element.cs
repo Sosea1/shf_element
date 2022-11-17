@@ -47,22 +47,31 @@ namespace shf_element
 
         private void button2_Click(object sender, EventArgs e)
         {
-      
-        }
+            string[] values = textBox2.Text.Split(',');
+            int i = 0;
+            foreach (string value in values)
+            {
+                dataGridView1.Rows.Add();
+                dataGridView1.Rows[i].HeaderCell.Value = value;
+                i++;
+            }
 
-        private void Add_element_Load(object sender, EventArgs e)
-        {
-            for (int i = 0; i < 3; i++) dataGridView1.Rows.Add();
-            dataGridView1.Rows[0].HeaderCell.Value = "Параметры";
-            dataGridView1.Rows[1].HeaderCell.Value = "Промежуточные значения";
-            dataGridView1.Rows[2].HeaderCell.Value = "Матрица";
-           
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int a = comboBox1.SelectedIndex + 1;
+            dataGridView2.RowCount = a;
+            dataGridView2.ColumnCount = a;
+            dataGridView2.RowHeadersVisible = false;
+        }
+
+
 
         //для изображений
         /*try
