@@ -74,7 +74,6 @@ namespace shf_element
         private void Add_element_Load(object sender, EventArgs e)
         {
             P3.Dock = DockStyle.Fill;
-            splitContainer3.
         }
 
 
