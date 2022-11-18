@@ -71,11 +71,9 @@ namespace shf_element
             P3.Location = new Point(1, 1);
             P3.Show();
             dataGridView2.RowTemplate.Height = 50;
-            MessageBox.Show(dataGridView1.Rows.Count.ToString());
-            MessageBox.Show(dataGridView1.Columns.Count.ToString());
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                values.Add(dataGridView1.Rows[i].HeaderCell.Value.ToString(), dataGridView1[0, i].Value.ToString());
+                values.Add(dataGridView1.Rows[i].HeaderCell.Value.ToString(), dataGridView1[0, i].Value == null ? null : dataGridView1[0, i].Value.ToString());
             }
         }
 
@@ -83,14 +81,14 @@ namespace shf_element
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
+            //dataGridView1.Rows.Clear();
             P2.Hide();
             P1.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            dataGridView2.Rows.Clear();
+            //dataGridView2.Rows.Clear();
             P3.Hide();
             P2.Show();
         }

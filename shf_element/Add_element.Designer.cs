@@ -229,7 +229,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
-       
             // 
             // splitContainer3
             // 
@@ -273,7 +272,7 @@
             this.AddElement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AddElement.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddElement.Location = new System.Drawing.Point(680, 21);
-            this.AddElement.Name = "button7";
+            this.AddElement.Name = "AddElement";
             this.AddElement.Size = new System.Drawing.Size(101, 23);
             this.AddElement.TabIndex = 55;
             this.AddElement.Text = "Далее";
