@@ -1,20 +1,19 @@
 [
   {
-    "group": "smth",
-    "name": "smth",
-    "matrix": [
-      "A/B",
-      "B/c",
-      "C/a"
-    ],
+    "group": "Двухполюсники",
+    "name": "element",
     "parameters": [
-      "A",
-      "B",
-      "C"
+      "R",
+      "C",
+      "Zв1",
+      "Zв2"
     ],
     "other_par": {
-      "Z": "C-A",
-      "Z1": "B-A"
-    }
+      "Z": "R+C",
+      "Y": "R+C"
+    },
+    "matrix": [
+      "R+C"
+    ]
   }
 ]

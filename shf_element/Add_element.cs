@@ -14,7 +14,9 @@ namespace shf_element
 {
     public partial class Add_element : Form
     {
-        
+        Dictionary<string, string> values = new Dictionary<string, string>();
+        string group, name;
+        string[] parameters; 
         string file;
         public Add_element()
         {
@@ -36,6 +38,9 @@ namespace shf_element
 
         private void button2_Click(object sender, EventArgs e)
         {
+            group = comboBox1.SelectedItem.ToString();
+            name = nameBox.Text;
+            parameters = textBox1.Text.Split(',');
             string[] values = textBox2.Text.Split(',');
             int i = 0;
             foreach (string value in values)
@@ -65,6 +70,13 @@ namespace shf_element
             P2.Hide();
             P3.Location = new Point(1, 1);
             P3.Show();
+            dataGridView2.RowTemplate.Height = 50;
+            MessageBox.Show(dataGridView1.Rows.Count.ToString());
+            MessageBox.Show(dataGridView1.Columns.Count.ToString());
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                values.Add(dataGridView1.Rows[i].HeaderCell.Value.ToString(), dataGridView1[0, i].Value.ToString());
+            }
         }
 
        
@@ -87,7 +99,22 @@ namespace shf_element
         {
             P2.Hide();
             P3.Hide();
-            
+        }
+
+        private void AddElement_Click(object sender, EventArgs e)
+        {
+            Insert_Elements insert_Elements = new Insert_Elements();
+            List<string> matrix = new List<string>();
+            int a =0;
+            for (int i = 0; i < dataGridView2.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView2.Columns.Count; j++)
+                {
+                    matrix.Add(dataGridView2[j, i].Value.ToString());
+                }
+            }
+            string[] Matrix = matrix.ToArray();
+            insert_Elements.AddNewElement(group, name, parameters, values, Matrix);
         }
 
        

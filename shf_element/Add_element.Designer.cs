@@ -44,7 +44,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button7 = new System.Windows.Forms.Button();
+            this.AddElement = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.P3 = new System.Windows.Forms.Panel();
@@ -165,6 +165,7 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(354, 23);
             this.nameBox.TabIndex = 56;
+            this.nameBox.Text = "element";
             // 
             // textBox2
             // 
@@ -173,6 +174,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(354, 23);
             this.textBox2.TabIndex = 59;
+            this.textBox2.Text = "Z,Y";
             // 
             // label7
             // 
@@ -191,6 +193,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(354, 23);
             this.textBox1.TabIndex = 60;
+            this.textBox1.Text = "R,C,Zв1,Zв2";
             // 
             // label2
             // 
@@ -242,7 +245,7 @@
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.button7);
+            this.splitContainer3.Panel2.Controls.Add(this.AddElement);
             this.splitContainer3.Panel2.Controls.Add(this.button5);
             this.splitContainer3.Panel2.Controls.Add(this.button6);
             this.splitContainer3.Size = new System.Drawing.Size(800, 400);
@@ -265,7 +268,7 @@
             this.dataGridView2.Size = new System.Drawing.Size(437, 223);
             this.dataGridView2.TabIndex = 51;
             // 
-            // button7
+            // AddElement
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -433,7 +436,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button AddElement;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel P3;
