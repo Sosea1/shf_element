@@ -28,19 +28,7 @@ namespace shf_element
 
         }
             
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog choose_pic = new OpenFileDialog();
-            choose_pic.Filter = "Images files |*.jpg;*.jpeg;*.png;*.svg;*.ico; | All files | *.*";
-            
-            if (choose_pic.ShowDialog() == DialogResult.OK)
-            {
-                file = choose_pic.FileName;
-
-                pictureBox1.Image = Image.FromFile(file);
-            }
-
-        }
+       
         public void copy_file() 
         {
             System.IO.File.Copy(file, Application.StartupPath + @"\element_picture\" + Path.GetFileName(nameBox.Text) + ".png");
@@ -101,6 +89,23 @@ namespace shf_element
             P3.Hide();
             
         }
+
+       
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog choose_pic = new OpenFileDialog();
+            choose_pic.Filter = "Images files |*.jpg;*.jpeg;*.png;*.svg;*.ico; | All files | *.*";
+
+            if (choose_pic.ShowDialog() == DialogResult.OK)
+            {
+                file = choose_pic.FileName;
+
+                pictureBox1.Image = Image.FromFile(file);
+            }
+        }
+
+
 
 
 
