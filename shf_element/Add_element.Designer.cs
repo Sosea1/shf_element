@@ -270,14 +270,15 @@
             // 
             // AddElement
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(680, 21);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(101, 23);
-            this.button7.TabIndex = 55;
-            this.button7.Text = "Далее";
-            this.button7.UseVisualStyleBackColor = true;
+            this.AddElement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddElement.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddElement.Location = new System.Drawing.Point(680, 21);
+            this.AddElement.Name = "button7";
+            this.AddElement.Size = new System.Drawing.Size(101, 23);
+            this.AddElement.TabIndex = 55;
+            this.AddElement.Text = "Далее";
+            this.AddElement.UseVisualStyleBackColor = true;
+            this.AddElement.Click += new System.EventHandler(this.AddElement_Click);
             // 
             // button5
             // 
