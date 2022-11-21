@@ -6,15 +6,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.IO;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.WebRequestMethods;
 
 namespace shf_element
 {
     public partial class Add_element : Form
     {
-        
+        public int Formula_(string expression)
+        {
+            int result = (int)new DataTable().Compute(expression, null); // 1111
+            return result;
+        }
         string file;
         public Add_element()
         {
@@ -67,7 +69,7 @@ namespace shf_element
             P3.Show();
         }
 
-       
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -81,6 +83,9 @@ namespace shf_element
             dataGridView2.Rows.Clear();
             P3.Hide();
             P2.Show();
+            int a = Formula_("((386*52)+385/30-1)*2");
+            string b = a.ToString();
+            MessageBox.Show(b);
         }
 
         private void Add_element_Load(object sender, EventArgs e)
