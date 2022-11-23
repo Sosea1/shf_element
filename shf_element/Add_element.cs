@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
+using MathNet.Symbolics;
+using Expr = MathNet.Symbolics.SymbolicExpression;
+
 
 namespace shf_element
 {
@@ -14,8 +17,10 @@ namespace shf_element
     {
         Dictionary<string, string> values = new Dictionary<string, string>();
         string group, name;
-        string[] parameters; 
+        string[] parameters;
         string file;
+        string temp_values;
+
         public Add_element()
         {
             InitializeComponent();
@@ -31,27 +36,30 @@ namespace shf_element
        
         public void copy_file() 
         {
-            System.IO.File.Copy(file, Application.StartupPath + @"\element_picture\" + Path.GetFileName(nameBox.Text) + ".png");
+            File.Copy(file, Application.StartupPath + @"\element_picture\" + Path.GetFileName(nameBox.Text) + ".png");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Label1_Next_Click(object sender, EventArgs e)
         {
+            if(values_textbox.Text != temp_values)
+            {
+                dataGrid1_Fill();
+            }
+            temp_values = values_textbox.Text;
             group = comboBox1.SelectedItem.ToString();
             name = nameBox.Text;
-            parameters = textBox1.Text.Split(',');
-            string[] values = textBox2.Text.Split(',');
-            int i = 0;
-            foreach (string value in values)
+            parameters = params_textbox.Text.Split(',');
+            //string[] values = textBox2.Text.Split(',');
+            //int i = 0;
+           /* foreach (string value in values)
             {
                 dataGridView1.Rows.Add();
                 dataGridView1.Rows[i].HeaderCell.Value = value;
                 i++;
-            }
+            }*/
             P1.Hide();
             P2.Location = new Point(1, 1);
             P2.Show();
-
-
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -68,27 +76,22 @@ namespace shf_element
             P2.Hide();
             P3.Location = new Point(1, 1);
             P3.Show();
-            dataGridView2.RowTemplate.Height = 50;
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                values.Add(dataGridView1.Rows[i].HeaderCell.Value.ToString(), dataGridView1[0, i].Value == null ? null : dataGridView1[0, i].Value.ToString());
-            }
+            
         }
 
         
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //dataGridView1.Rows.Clear();
             P2.Hide();
             P1.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //dataGridView2.Rows.Clear();
             P3.Hide();
             P2.Show();
+            
         }
 
         private void Add_element_Load(object sender, EventArgs e)
@@ -102,21 +105,27 @@ namespace shf_element
             Insert_Elements insert_Elements = new Insert_Elements();
             List<string> matrix = new List<string>();
             int a =0;
-            for (int i = 0; i < dataGridView2.Rows.Count; i++)
+          /*  for (int i = 0; i < dataGridView2.Rows.Count; i++)
             {
                 for (int j = 0; j < dataGridView2.Columns.Count; j++)
                 {
                     matrix.Add(dataGridView2[j, i].Value.ToString());
                 }
+            }*/
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                values.Add(dataGridView1.Rows[i].HeaderCell.Value.ToString(), dataGridView1[0, i].Value == null ? null : dataGridView1[0, i].Value.ToString());
+                MessageBox.Show(Expr.Parse(dataGridView1[0, i].Value.ToString()).ToString());
+                // Entity expr = dataGridView1[0, i].Value.ToString();
+                // MessageBox.Show(expr.EvalNumerical().ToString());
             }
             string[] Matrix = matrix.ToArray();
-            insert_Elements.AddNewElement(group, name, parameters, values, Matrix);
+           // insert_Elements.AddNewElement(group, name, parameters, values, Matrix);
         }
-
-       
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
             OpenFileDialog choose_pic = new OpenFileDialog();
             choose_pic.Filter = "Images files |*.jpg;*.jpeg;*.png;*.svg;*.ico; | All files | *.*";
 
@@ -128,7 +137,38 @@ namespace shf_element
             }
         }
 
-
+        public void dataGrid1_Fill()
+        {
+            string[] values = values_textbox.Text.Split(',');
+            int i = 0;
+                foreach (string value in values)
+                {
+                try
+                {
+                    if (dataGridView1.Rows.Count - i == 0) goto f;
+                    
+                        if (dataGridView1.Rows[i].HeaderCell.Value.ToString() == value)
+                        {
+                            i++;
+                            continue;
+                        }
+                        dataGridView1.Rows.RemoveAt(i);
+                    f:
+                        dataGridView1.Rows.Add();
+                        dataGridView1.Rows[i].HeaderCell.Value = value;
+                        i++;
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Произошла ошибка");
+                    }
+                }
+           
+            for (int j = values.Length; j < dataGridView1.Rows.Count; j++)
+            {
+                dataGridView1.Rows.RemoveAt(j);
+            }
+        }
 
 
 

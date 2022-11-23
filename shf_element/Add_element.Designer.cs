@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Label1_Next = new System.Windows.Forms.Button();
             this.P1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.values_textbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.params_textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -79,17 +79,16 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // button2
+            // Label1_Next
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(680, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 23);
-            this.button2.TabIndex = 48;
-            this.button2.Text = "Далее";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Label1_Next.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Label1_Next.Location = new System.Drawing.Point(680, 21);
+            this.Label1_Next.Name = "Label1_Next";
+            this.Label1_Next.Size = new System.Drawing.Size(101, 23);
+            this.Label1_Next.TabIndex = 48;
+            this.Label1_Next.Text = "Далее";
+            this.Label1_Next.UseVisualStyleBackColor = true;
+            this.Label1_Next.Click += new System.EventHandler(this.Label1_Next_Click);
             // 
             // P1
             // 
@@ -112,16 +111,16 @@
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.nameBox);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox2);
+            this.splitContainer1.Panel1.Controls.Add(this.values_textbox);
             this.splitContainer1.Panel1.Controls.Add(this.label7);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.params_textbox);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.button2);
+            this.splitContainer1.Panel2.Controls.Add(this.Label1_Next);
             this.splitContainer1.Size = new System.Drawing.Size(800, 400);
             this.splitContainer1.SplitterDistance = 339;
             this.splitContainer1.TabIndex = 51;
@@ -167,14 +166,14 @@
             this.nameBox.TabIndex = 56;
             this.nameBox.Text = "element";
             // 
-            // textBox2
+            // values_textbox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(176, 173);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(354, 23);
-            this.textBox2.TabIndex = 59;
-            this.textBox2.Text = "Z,Y";
+            this.values_textbox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.values_textbox.Location = new System.Drawing.Point(176, 173);
+            this.values_textbox.Name = "values_textbox";
+            this.values_textbox.Size = new System.Drawing.Size(354, 23);
+            this.values_textbox.TabIndex = 59;
+            this.values_textbox.Text = "Z,Y";
             // 
             // label7
             // 
@@ -186,14 +185,14 @@
             this.label7.TabIndex = 55;
             this.label7.Text = "Название:";
             // 
-            // textBox1
+            // params_textbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(176, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(354, 23);
-            this.textBox1.TabIndex = 60;
-            this.textBox1.Text = "R,C,Zв1,Zв2";
+            this.params_textbox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.params_textbox.Location = new System.Drawing.Point(176, 140);
+            this.params_textbox.Name = "params_textbox";
+            this.params_textbox.Size = new System.Drawing.Size(354, 23);
+            this.params_textbox.TabIndex = 60;
+            this.params_textbox.Text = "R,C,Zв1,Zв2";
             // 
             // label2
             // 
@@ -421,16 +420,16 @@
 
         #endregion
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Label1_Next;
         private System.Windows.Forms.Panel P1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nameBox;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox values_textbox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox params_textbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
