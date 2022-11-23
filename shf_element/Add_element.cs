@@ -143,25 +143,21 @@ namespace shf_element
             int i = 0;
                 foreach (string value in values)
                 {
-                try
+
+                if (dataGridView1.Rows.Count - i == 0) dataGridView1.Rows.Add();
+                else
                 {
-                    if (dataGridView1.Rows.Count - i == 0) goto f;
-                    
-                        if (dataGridView1.Rows[i].HeaderCell.Value.ToString() == value)
-                        {
-                            i++;
-                            continue;
-                        }
-                        dataGridView1.Rows.RemoveAt(i);
-                    f:
-                        dataGridView1.Rows.Add();
+
+                    if (dataGridView1.Rows[i].HeaderCell.Value.ToString() == value)
+                    {
+                        i++;
+                        continue;
+                    }
+                }
                         dataGridView1.Rows[i].HeaderCell.Value = value;
                         i++;
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Произошла ошибка");
-                    }
+                    
+                    
                 }
            
             for (int j = values.Length; j < dataGridView1.Rows.Count; j++)
